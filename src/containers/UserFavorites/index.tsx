@@ -30,6 +30,7 @@ const UserFavorites: FunctionComponent<UserFavoritesProps> = ({ favoriteReleases
     <Container>
       <h2 className="PageTitle">Favorites</h2>
       <hr />
+      {_.isEmpty(favoriteArtists) && _.isEmpty(favoriteReleases) && (<p>You have no favorites at the moment </p>) }
       {!_.isEmpty(favoriteArtists) && (
         <div className="FavoriteSection">
           <strong>Artist Section</strong>
